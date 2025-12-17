@@ -8,7 +8,6 @@ function toggleMenu() {
     body.classList.toggle('menu-open');
 }
 
-// Fermer le menu quand on clique sur un lien
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         document.querySelector('.hamburger').classList.remove('active');
@@ -17,18 +16,15 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     });
 });
 
-// Mode sombre/clair
 const themeSwitch = document.getElementById('theme-switch');
 const body = document.body;
 
-// Charger le thème sauvegardé
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'light') {
     body.classList.add('light-mode');
     themeSwitch.checked = true;
 }
 
-// Toggle du thème
 themeSwitch.addEventListener('change', () => {
     if (themeSwitch.checked) {
         body.classList.add('light-mode');
@@ -39,7 +35,6 @@ themeSwitch.addEventListener('change', () => {
     }
 });
 
-// Le reste de votre code JavaScript (menu hamburger, etc.)
 function toggleMenu() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
