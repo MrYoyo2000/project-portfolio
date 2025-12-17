@@ -45,8 +45,6 @@ h1, h2, p {
     transition: color 0.3s ease;
 }
 
-/* BOUTON TOGGLE THEME */
-/* BOUTON TOGGLE THEME */
 .theme-toggle {
     position: fixed;
     top: 20px;
@@ -85,7 +83,6 @@ h1, h2, p {
     transition: all 0.4s ease;
 }
 
-/* Inversé : lune à gauche, soleil à droite */
 .moon {
     margin-left: 2px;
 }
@@ -107,7 +104,6 @@ h1, h2, p {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-/* Mode clair activé - balle à droite */
 #theme-switch:checked + .toggle-label {
     background: linear-gradient(135deg, #ffd700, #ffa500);
     border-color: #ffa500;
@@ -127,7 +123,6 @@ h1, h2, p {
     transform: rotate(-180deg) scale(0.8);
 }
 
-/* Adapter les couleurs des cartes */
 .div-card {
     background-color: var(--card-bg);
     border: 1px solid var(--glow-color);
@@ -141,7 +136,6 @@ h1, h2, p {
     border-color: var(--glow-color);
 }
 
-/* Adapter le menu de navigation */
 .nav-menu {
     background: linear-gradient(135deg, var(--bg-gradient-mid1), var(--bg-gradient-mid2));
     border-right: 2px solid var(--glow-color);
@@ -151,7 +145,6 @@ body.light-mode .nav-menu {
     background: linear-gradient(135deg, #ffffff, #f0f8ff);
 }
 
-/* Adapter les ombres de texte en mode clair */
 body.light-mode h1 {
     color: #1a1a1a;
     text-shadow: 0 0 10px rgba(74, 158, 201, 0.3);
@@ -203,7 +196,6 @@ p {
     word-wrap: break-word;
 }
 
-/* NAVIGATION */
 nav {
     padding: 20px 40px;
     position: fixed;
@@ -289,7 +281,6 @@ nav {
     transform: translateX(10px);
 }
 
-/* Effet tactile pour mobile */
 .nav-menu a:active {
     color: #ffffff;
     text-shadow: 0 0 25px #ffffff, 0 0 30px #0a70ff;
@@ -316,13 +307,11 @@ nav {
     filter: drop-shadow(0 0 15px #0a6fff);
 }
 
-/* Effet tactile pour mobile */
 .social-links a:active > img {
     transform: scale(1.2);
     filter: drop-shadow(0 0 15px #0a6fff);
 }
 
-/* SECTIONS */
 .div-card {
     display: flex;
     flex-direction: row-reverse;
@@ -375,7 +364,6 @@ button:hover {
     text-shadow: 0 0 10px #ffffffaa, 0 0 20px #0a70ff75;
 }
 
-/* Effet tactile pour mobile */
 button:active {
     color: #ffffff;
     border-color: #ffffff;
@@ -503,7 +491,6 @@ footer {
     margin: 8px 0;
 }
 
-/* Mode clair */
 body.light-mode footer {
     background: linear-gradient(135deg, #ffffff, #f0f8ff);
     box-shadow: 0 -5px 20px rgba(0, 112, 168, 0.3);
@@ -525,7 +512,6 @@ body.light-mode .footer-socials a:active img {
     filter: drop-shadow(0 0 20px #0070a8);
 }
 
-/* RESPONSIVE - EFFETS TACTILES SUR TOUTES LES PLATEFORMES */
 @media (max-width: 768px) {
     body.menu-open {
         margin-left: 200px;
