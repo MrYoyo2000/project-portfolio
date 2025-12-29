@@ -361,7 +361,7 @@ nav {
 .social-links {
     display: flex;
     flex-direction: row;
-    gap: clamp(15px, 3vw, 25px);
+    gap: clamp(2px, 3vw, 2px);
     margin-top: clamp(15px, 3vh, 30px);
     justify-content: center;
 }
