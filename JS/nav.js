@@ -51,3 +51,28 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
         body.classList.remove('menu-open');
     });
 });
+
+let linesTarget = 5868;
+let projectsTarget = 4;
+
+let lines = 0;
+let projectsDone = 0;
+
+const linesEl = document.getElementById("lines");
+const projectsEl = document.getElementById("projectsCount");
+
+const counter = setInterval(() => {
+if (lines < linesTarget) {
+    lines += 250;
+    linesEl.textContent = lines;
+}
+
+if (projectsDone < projectsTarget) {
+    projectsDone += 1;
+    projectsEl.textContent = projectsDone;
+}
+
+if (lines >= linesTarget && projectsDone >= projectsTarget) {
+    clearInterval(counter);
+}
+}, 50);
