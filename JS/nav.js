@@ -42,16 +42,18 @@ function toggleMenu() {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
     body.classList.toggle('menu-open');
+    overlay.classList.toggle('active'); // Ajout overlay
 }
 
+// Fermer le menu quand on clique sur un lien
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         document.querySelector('.hamburger').classList.remove('active');
         document.querySelector('.nav-menu').classList.remove('active');
-        body.classList.remove('menu-open');
+        document.body.classList.remove('menu-open');
+        document.querySelector('.menu-overlay').classList.remove('active'); // Ajout overlay
     });
 });
-
 let linesTarget = 5868;
 let projectsTarget = 4;
 

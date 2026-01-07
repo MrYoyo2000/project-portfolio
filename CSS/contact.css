@@ -251,7 +251,7 @@ nav {
     align-items: center;
     gap: clamp(15px, 2.5vh, 20px);
     transition: left 0.5s ease;
-    z-index: 1000;
+    z-index: 1001;
     box-shadow: none;
     border-right: none;
     padding: 12px;
@@ -634,7 +634,8 @@ body.light-mode .footer-socials a:active img {
 
 @media (max-width: 768px) {
     body.menu-open {
-        margin-left: 200px;
+        margin-left: 0;
+        overflow: hidden;
     }
 
     nav {
@@ -753,7 +754,8 @@ body.light-mode .footer-socials a:active img {
 
 @media (max-width: 480px) {
     body.menu-open {
-        margin-left: 180px;
+        margin-left: 0;
+        overflow: hidden;
     }
 
     nav {
@@ -869,7 +871,8 @@ body.light-mode .footer-socials a:active img {
 
 @media (max-width: 360px) {
     body.menu-open {
-        margin-left: 160px;
+        margin-left: 0;
+        overflow: hidden;
     }
 
     .hamburger span {
@@ -931,7 +934,8 @@ body.light-mode .footer-socials a:active img {
 
 @media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
     body.menu-open {
-        margin-left: 240px;
+        margin-left: 0;
+        overflow: hidden;
     }
 
     .nav-menu {
@@ -971,7 +975,8 @@ body.light-mode .footer-socials a:active img {
 
 @media (max-height: 500px) and (orientation: landscape) {
     body.menu-open {
-        margin-left: 200px;
+        margin-left: 0;
+        overflow: hidden;
     }
 
     .nav-menu {
@@ -1027,7 +1032,8 @@ body.light-mode .footer-socials a:active img {
 
 @media (max-width: 320px) {
     body.menu-open {
-        margin-left: 150px;
+        margin-left: 0;
+        overflow: hidden;
     }
 
     .nav-menu {
