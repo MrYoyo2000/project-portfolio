@@ -19,4 +19,4 @@ It showcases all your projects, skills, and experiences in a clean and professio
 ## 🛠️ Installation
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/portfolio.git
+git clone https://github.com/MrYoyo2000/project-portfolio
