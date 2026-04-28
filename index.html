@@ -1,271 +1,231 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="device-width, initial-scale=1.0">
-        <title>HOME</title>
-        <link rel="icon" href="/imege/Yossef Benamu Portfolio Logo - Signature Style (2).png">
-        <link rel="stylesheet" href="/CSS/home.css">
-    </head>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Yossef Portfolio</title>
+<link rel="stylesheet" href="CSS/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<script defer src="JS/script.js"></script>
+</head>
 
-    <body>
-        
-        <header>
+<body>
+<header>
+  <div class="container header-inner">
+    <div class="logo">Yossef Benamu</div>
+    <nav>
+      <a href="#projects"><i class="fas fa-code"></i> Projects</a>
+      <a href="#about"><i class="fas fa-user"></i> About</a>
+      <a href="#skills"><i class="fas fa-tools"></i> Skills</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+  </div>
+</header>
 
-            <nav>
-                <div class="hamburger" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                
-        <div class="nav-menu" onclick="toggleMenu()">            
-                <div class="theme-toggle">
-                <input type="checkbox" id="theme-switch">
-                <label for="theme-switch" class="toggle-label">            
-                <span class="moon">🌑</span>
-                <span class="sun">☀️</span>
-                <div class="toggle-ball"></div>
-            </label>
+<div class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="profile-pic">
+    <img src="./photo/WhatsApp Image 2026-02-06 at 2.01.11 PM.jpeg" alt="Profile photo">
+    </div>
+    <h1>Yossef Benamu</h1>
+    <h2>Full-Stack Developer • Blockchain Enthusiast • FinTech Explorer</h2>
+    <p>
+      Hey there! I'm passionate about crafting modern web apps and diving into blockchain tech. I love building scalable systems with APIs, especially in the world of finance and trading.
+    </p>
+
+    <div class="cta">
+      <a href="#projects" class="btn primary">Check Out My Work</a>
+      <a href="#contact" class="btn">Get In Touch</a>
+    </div>
+  </section>
+
+<!-- PROJECTS -->
+<section id="projects" class="container">
+
+  <h2>Projects</h2>
+
+  <div class="slider">
+
+    <div class="slides" id="slides">
+
+      <div class="slide">
+        <h3>Discord Bot</h3>
+        <p>
+          Built a custom Discord bot to automate server tasks and handle commands smoothly. It's all about that event-driven magic to keep things running efficiently.
+        </p>
+        <div class="tags">
+          Node.js • Discord API • JavaScript
         </div>
-                    <a href="/index.html">HOME</a>
-                    <a href="/pages/about.html">ABOUT</a>
-                    <a href="/pages/project.html">PROJECT</a>
-                    <a href="/pages/contact.html">CONTACT</a>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        
-        <h1>welcome</h1>
-        
-        <main>
-            <h2>ABOUT ME</h2>
-            <section>
-                <div class="div-card">
-                    <img src="../imege/me.jpg" alt="me">
-                    <div>
-                        <p>My name is Yossef
-                        I studied finance which taught me discipline 
-                        analytical thinking and how to understand market trends. During my studies 
-                        I discovered development and began training in full stack programming 
-                        a field that matches my logic and curiosity. Alongside this I actively trade 
-                        which strengthens my strategic mindset and decision making. I like to learn quickly 
-                        build clean systems and combine finance strategy and modern technology to create meaningful 
-                        and efficient projects.</p>
-                        <button onclick="window.location.href='/pages/about.html'">ABOUT</button>
-                    </div>
-                </div>
-            </section>
+        <a href="https://github.com/MrYoyo2000/BOT-DISCORD" target="_blank" class="project-btn">
+          View Project →
+        </a>
+      </div>
 
-            <section>
-                <h2>PROJECT</h2>
-
-                </div>
-                <div class="div-card">
-                    <div class="logo-container">
-                    <img src="../imege/HTML5-Logo-PNG-Symbol-for-Web-Development-Transparent.png" class="logo" alt="HTML5">
-                    <img src="../imege/CSS-Logo-PNG-Symbol-for-Web-Development-Transparent.png" class="logo" alt="CSS3">
-                    <img src="../imege/Python-programming-code-coding-transparent-PNG-image.png" class="logo" alt="Python">
-                    <img src="../imege/JavaScript-Logo-PNG-Symbol-for-Web-Development-Transparent.png" class="logo" alt="JavaScript">
-                    <div>
-                        <p>Before starting my formal studies I had already begun building personal projects driven by 
-                        curiosity and a strong desire to understand how systems work from the inside. I experimented with blockchain concepts 
-                        created small decentralized applications and developed tools to explore how transactions hashing and smart contracts 
-                        behave in real environments. Over time I also coded several independent projects ranging from utility scripts to early 
-                        prototypes of websites and trading related functions.
-                        These projects allowed me to develop a solid foundation in problem solving 
-                        logic and software structure. Today I continue building more advanced systems  
-                        combining blockchain fundamentals with modern full stack development to create practical secure and well designed solutions.</p>
-                        
-                        <p>Lines of code written : <span id="lines">0</span></p>
-                        <p>Completed projects : <span id="projectsCount">0</span></p>
-                        <button onclick="window.location.href='/pages/project.html'">PROJECT</button>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h2>SKILLS</h2>
-                <div class="div-card">
-                    <ul>
-        <li>Blockchain
-        <ul>
-            <li>
-            Blockchain Understanding
-            <p>
-                Understanding how blockchain technology works, how transactions are recorded and verified,
-                and why decentralization is useful.
-            </p>
-            </li>
-
-            <li>
-            Blockchain Data Analysis 
-            <p>
-                Self-developed programs used to scan and analyze blockchain data in order to extract
-                meaningful information.
-                <br>
-            </p>
-            </li>
-        </ul>
-        </li>
-
-        <li>Trading & Financial Markets
-        <ul>
-            <li>
-            Market Analysis
-            <p>
-                Analyzing price movements to better understand market behavior, trends, and volatility.
-            </p>
-            </li>
-
-            <li>
-            Trading Strategy
-            <p>
-                Building structured trading strategies based on observation, logic, and decision-making rules.
-            </p>
-            </li>
-
-            <li>
-            Risk Management 
-            <p>
-                Applying risk management principles to protect capital and maintain long-term consistency.
-            </p>
-            </li>
-        </ul>
-        </li>
-
-        <li>Development & Programming
-        <ul>
-            <li>
-            HTML & CSS
-            <p>
-                Building clean, structured, and responsive websites with a focus on clarity and usability.
-                <br>
-            </p>
-            </li>
-
-            <li>
-            JavaScript
-            <p>
-                Using JavaScript to create interactive elements and manage dynamic behavior on websites.
-            </p>
-            </li>
-
-            <li>
-            Python Automation & Data Processing
-            <p>
-                Using Python to develop scripts and programs, including blockchain scanning and data analysis tools.
-            </p>
-            </li>
-        </ul>
-        </li>
-
-        <li>Working Method
-        <ul>
-            <li>
-            Self-Taught Learning 
-            <p>
-                Learning independently through practice, experimentation, and personal projects.
-            </p>
-            </li>
-
-            <li>
-            Personal Projects
-            <p>
-                Developing personal projects to connect finance, blockchain, and programming skills.
-            </p>
-            </li>
-        </ul>
-        </li>
-
-        <li>Languages
-        <ul>
-            <li>
-            French
-            <p>
-                Native language, fluent in both speaking and writing.
-            </p>
-            </li>
-
-            <li>
-            Hebrew
-            <p>
-                Native language, fluent in both speaking and writing.
-            </p>
-            </li>
-
-            <li>
-            English
-            <p>
-                Strong working proficiency, especially for technical documentation.
-            </p><button onclick="window.location.href='../CV/CV yossef benamu .pdf'">CV</button>
-            </li>
-        </ul>
-        </li>
-        
-    </ul>
-                </div>
-            </section>
-            <section>
-                <h2>CONTACT ME</h2>
-                <div class="div-card">
-                    
-                    <p>if you want to contact You can use several options: either send me an email, fill out a form, or contact me directly on my social media which is in the footer.
-                    <br>
-                    <br>
-                    <button onclick="window.location.href='/pages/contact.html'">contact</button></p>
-
-                </div>
-            </section>
-        </main>
-        
-        <footer>
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>Yossef Benamu</h3>
-            <p>Full Stack Developer | Finance Trader</p>
-            <p>Passionate about blockchain, web development, and financial technology.</p>
+      <div class="slide">
+        <h3>Wallet Tracker</h3>
+        <p>
+          Created a handy tool to track crypto wallets in real-time. It pulls data from APIs to give you a clear view of blockchain activity—perfect for staying on top of your assets.
+        </p>
+        <div class="tags">
+          Python • APIs • Blockchain
         </div>
+        <a href="https://github.com/MrYoyo2000/wallet-traker" target="_blank" class="project-btn">
+          View Project →
+        </a>
+      </div>
 
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul class="footer-links">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/pages/about.html">About</a></li>
-                <li><a href="/pages/project.html">Projects</a></li>
-                <li><a href="/pages/contact.html">Contact</a></li>
-            </ul>
+      <div class="slide">
+        <h3>Blockchain Tracker</h3>
+        <p>
+          Developed a system to analyze and monitor blockchain transactions live. It helps decode on-chain activity, making complex data more understandable and actionable.
+        </p>
+        <div class="tags">
+          Python • Blockchain • Data Processing
         </div>
+        <a href="https://github.com/MrYoyo2000/Blockchain-Traker" target="_blank" class="project-btn">
+          View Project →
+        </a>
+      </div>
 
-        <div class="footer-section">
-            <h3>Follow Me & contact me</h3>
-            <div class="footer-socials">
-                <a href="https://github.com/MrYoyo2000" target="_blank" aria-label="GitHub">
-                    <img src="../imege/github-computer-icons-gitlab-github-2d3a6879e956afe77b7b2ed9c9cb5b22.png" alt="GitHub">
-                </a>
-                <a href="https://www.linkedin.com/in/yossef-benamu-b18b98229/" target="_blank" aria-label="LinkedIn">
-                    <img src="../imege/5bbf4bcd44bbe-35dbec106cc36e5ac36df475379c8c85.png" alt="LinkedIn">
-                </a>
-                <a href="https://www.instagram.com/yossef_benamu123/" target="_blank" aria-label="instagram">
-                    <img src="../imege/pngegg.png" alt="instagram">
-                </a>
-
-                <a href="https://wa.me/+972547898883" target="_blank" aria-label="whatsapp">
-                <img src="../imege/pngegg (1).png" alt="whatsapp">
-                </a>
-
-                <a href="tel:+972547898883" target="_blank" aria-label="call me">
-                <img src="../imege/pngegg (2).png" alt="call me">
-                </a>
-            </div>
+      <div class="slide">
+        <h3>Portfolio Website</h3>
+        <p>
+          Designed this responsive portfolio to showcase my journey as a developer. Clean UI, smooth interactions—it's where my projects and skills come to life.
+        </p>
+        <div class="tags">
+          HTML • CSS • JavaScript
         </div>
+        <a href="https://github.com/MrYoyo2000/project-portfolio" target="_blank" class="project-btn">
+          View Project →
+        </a>
+      </div>
+
+      <div class="slide">
+        <h3>To-Do Application</h3>
+        <p>
+          A simple yet effective task manager with full CRUD operations. Uses local storage to keep your to-dos persistent—great for staying organized on the go.
+        </p>
+        <div class="tags">
+          JavaScript • HTML • CSS
+        </div>
+        <a href="https://github.com/MrYoyo2000/to-do-list-application" target="_blank" class="project-btn">
+          View Project →
+        </a>
+      </div>
+
     </div>
 
-    <div class="footer-bottom">
-        <p>&copy; 2025 Yossef Benamu. All rights reserved.</p>
+    <!-- CONTROLS (IMPORTANT: OUTSIDE slides) -->
+    <div class="controls">
+        <button onclick="prev()">←</button>
+        <button onclick="next()">→</button>
     </div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About</h2>
+
+  <div class="about">
+
+    <h3>Who I am</h3>
+    <p>
+      Hi, I'm Yossef a self-taught developer with a knack for full-stack apps and blockchain tech. I'm really into fintech and how trading systems can be improved through code.
+    </p>
+
+    <h3>My background</h3>
+    <p>
+      My journey kicked off in finance and trading, where I honed my analytical skills and learned to tackle problems head-on. It gave me a solid foundation for understanding complex systems and approaching challenges logically.
+    </p>
+
+    <p>
+      From there, I jumped into software development. I've been learning through real projects, experimenting constantly, and pushing myself to build better solutions every time.
+    </p>
+
+    <h3>What I do today</h3>
+    <p>
+      These days, I'm all about creating sleek, efficient web apps that actually solve real problems. I get a kick out of turning wild ideas into working products and leveling up my skills with hands-on coding.
+    </p>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="container">
+
+  <h2>Skills</h2>
+
+  <h3>Technologies & Skills</h3>
+
+  <p>
+    I dive into a variety of tools and tech across the full stack, from front-end magic to back-end logic and data crunching.
+  </p>
+
+  <div class="skills">
+
+    <div class="skill-box">
+      <h4>Frontend</h4>
+      <p>HTML • CSS • JavaScript • React</p>
+    </div>
+
+    <div class="skill-box">
+      <h4>Backend</h4>
+      <p>Node.js • Python • Django </p>
+    </div>
+
+    <div class="skill-box">
+      <h4>Databases</h4>
+      <p>SQL • MongoDB</p>
+    </div>
+
+    <div class="skill-box">
+      <h4>Other</h4>
+      <p>Docker • APIs • Blockchain basics • FinTech interest</p>
+    </div>
+
+    <div class="skill-box">
+      <h4>FinTech & Trading</h4>
+      <p>Market analysis basics • Trading system concepts • Handling financial data</p>
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <a href="https://github.com/MrYoyo2000" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/yossef-benamu-b18b98229/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="mailto:yossef.benamu@example.com"><i class="fas fa-envelope"></i> Email</a>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-inner">
+    <p>&copy; 2026 Yossef Benamu. Built with passion for code and creativity.</p>
+    <div class="footer-links">
+      <a href="#projects"><i class="fas fa-code"></i> Projects</a>
+      <a href="#about"><i class="fas fa-user"></i> About</a>
+      <a href="#skills"><i class="fas fa-tools"></i> Skills</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    </div>
+    <div class="social-links">
+      <a href="https://github.com/MrYoyo2000" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/yossef-benamu-b18b98229/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:yossef.benamu@example.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
 </footer>
-        <script src="/JS/nav.js"></script>
-    </body>
+
+</body>
 </html>
