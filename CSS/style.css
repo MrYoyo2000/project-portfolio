@@ -77,6 +77,13 @@ nav {
   color: #888;
 }
 
+nav a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s;
+}
+
 nav a:hover {
   color: #3b82f6;
 }
@@ -409,81 +416,150 @@ footer {
    📱 MOBILE (0 - 768px)
 ======================= */
 @media (max-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
+
+  header {
+    padding: 15px 0;
+  }
+
+  .logo {
+    font-size: 12px;
+  }
+
+  nav {
+    gap: 6px;
+    font-size: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 65vw;
+    scrollbar-width: none;
+  }
+
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav a {
+    flex-shrink: 0;
+    padding: 4px 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .hero {
+    min-height: 80vh;
+    text-align: center;
+  }
 
   .hero h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
 
-    .profile-pic {
-    width: 90px;
-    height: 90px;
+  .hero h2 {
+    font-size: 14px;
   }
 
-  /* remplace hover par effet tactile */
-  .profile-pic:active {
-    transform: scale(1.05);
+  .hero p {
+    max-width: 100%;
+  }
+
+  .cta {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   section {
     padding: 80px 0;
   }
 
-  nav {
-    display: none;
+  section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
   }
 
   .slide {
-    padding: 24px;
+    padding: 20px;
   }
 
-  .cta {
-    flex-direction: column;
-    align-items: flex-start;
+  .slide h3 {
+    font-size: 18px;
   }
 
-   nav {
-    display: flex !important;
-    gap: 14px;
-    font-size: 13px;
-    position: static;
+  .about p {
+    max-width: 100%;
+  }
+
+  .skill-box {
+    padding: 14px;
+  }
+
+  .profile-pic {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 30px;
+  }
+
+  .profile-pic:active {
+    transform: scale(1.05);
+  }
+
+  footer {
+    padding: 30px 0 15px;
+  }
+
+  .footer-links {
+    gap: 15px;
+  }
+
+  .social-links {
+    gap: 12px;
   }
 }
 
 /* =======================
-   📱 TABLET (768px - 1024px)
+   📱 TABLET (769px - 1023px)
 ======================= */
-@media (max-width: 768px) {
-
+@media (min-width: 769px) and (max-width: 1023px) {
   header .header-inner {
     padding: 0 10px;
   }
 
   nav {
-    display: flex !important;
     gap: 12px;
     font-size: 12px;
-
-    /* important: scroll horizontal propre */
     overflow-x: auto;
     white-space: nowrap;
-
-    /* esthétique */
     max-width: 70vw;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
   }
 
   nav::-webkit-scrollbar {
-    display: none; /* Chrome */
+    display: none;
   }
 
   nav a {
     flex-shrink: 0;
     padding: 6px 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
   }
 
-.profile-pic {
+  .profile-pic {
     width: 100px;
     height: 100px;
+  }
+
+  .hero h1 {
+    font-size: 56px;
+  }
+
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
