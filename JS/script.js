@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (startX - endX > 50) next();
     if (endX - startX > 50) prev();
   });
-
+// clicr particles
   const createClickParticles = (event) => {
     const trigger = event.target.closest("a, .btn, .skill-box, .slide");
     if (!trigger) return;
