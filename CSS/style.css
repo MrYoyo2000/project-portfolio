@@ -1,4 +1,3 @@
-
 /* =======================
    RESET + BASE
 ======================= */
@@ -195,6 +194,10 @@ section {
   padding: 140px 0 100px;
 }
 
+.container > section + section {
+  margin-top: 80px;
+}
+
 section h2 {
   font-size: 28px;
   margin-bottom: 24px;
@@ -221,6 +224,12 @@ section h2 {
   border: 1px solid #1c1c1c;
   border-radius: 12px;
   background: rgba(255,255,255,0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.slide:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
 }
 
 .slide h3 {
@@ -238,6 +247,22 @@ section h2 {
   margin-top: 12px;
   color: #3b82f6;
   font-size: 12px;
+}
+
+.project-btn {
+  display: inline-block;
+  margin-top: 16px;
+  color: #fff;
+  padding: 10px 16px;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 8px;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.project-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(59,130,246,0.18);
+  border-color: #3b82f6;
 }
 
 /* controls */
@@ -285,15 +310,21 @@ section h2 {
 .skills {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 18px;
+  gap: 24px;
   margin-top: 30px;
 }
 
 .skill-box {
-  padding: 18px;
+  padding: 22px;
   border: 1px solid #1c1c1c;
   border-radius: 10px;
   background: rgba(255,255,255,0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(59,130,246,0.1);
 }
 
 .skill-box h4 {
@@ -339,6 +370,12 @@ section h2 {
 /* =======================
    CONTACT
 ======================= */
+.contact p {
+  max-width: 700px;
+  margin-bottom: 18px;
+  color: #ccc;
+}
+
 .contact a {
   display: flex;
   align-items: center;
@@ -347,11 +384,12 @@ section h2 {
   color: #888;
   font-size: 14px;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.2s, transform 0.2s;
 }
 
 .contact a:hover {
   color: #3b82f6;
+  transform: translateX(4px) scale(1.02);
 }
 
 /* =======================
@@ -574,5 +612,40 @@ footer {
 
   .skills {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+.click-tech {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  background: radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.95), rgba(59, 130, 246, 0.12));
+  border-radius: 50%;
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.35), 0 0 34px rgba(96, 165, 250, 0.18);
+  transform: translate(-50%, -50%) scale(0.75);
+  opacity: 0.9;
+  filter: blur(0.4px);
+}
+
+.click-tech--animate {
+  animation: click-tech-rise 0.88s ease-out forwards;
+}
+
+@keyframes click-tech-rise {
+  0% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+  25% {
+    opacity: 0.72;
+    transform: translate(calc(-50% + 4px), -80%) scale(0.85);
+  }
+  55% {
+    opacity: 0.48;
+    transform: translate(calc(-50% + 7px), -118%) scale(0.95);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + 12px), -150%) scale(1.05);
   }
 }

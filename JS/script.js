@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateSlider();
   }
 
-  // IMPORTANT: rendre accessible aux boutons HTML
+  // IMPORTANT: expose slider controls for the HTML buttons
   window.next = next;
   window.prev = prev;
 
@@ -42,5 +42,35 @@ document.addEventListener("DOMContentLoaded", () => {
     if (startX - endX > 50) next();
     if (endX - startX > 50) prev();
   });
+
+  const createClickParticles = (event) => {
+    const trigger = event.target.closest("a, .btn, .skill-box, .slide");
+    if (!trigger) return;
+
+    const particleConfigs = [
+      { size: 18, offsetX: -8, offsetY: -6, delay: 0 },
+      { size: 12, offsetX: 6, offsetY: -10, delay: 0.05 },
+      { size: 22, offsetX: 10, offsetY: 4, delay: 0.1 },
+      { size: 10, offsetX: -12, offsetY: 8, delay: 0.12 }
+    ];
+
+    particleConfigs.forEach((config) => {
+      const particle = document.createElement("span");
+      particle.className = "click-tech";
+      particle.style.left = `${event.clientX + config.offsetX}px`;
+      particle.style.top = `${event.clientY + config.offsetY}px`;
+      particle.style.width = `${config.size}px`;
+      particle.style.height = `${config.size}px`;
+      particle.style.animationDelay = `${config.delay}s`;
+      particle.style.position = "fixed";
+      particle.style.willChange = "transform, opacity";
+
+      document.body.appendChild(particle);
+      requestAnimationFrame(() => particle.classList.add("click-tech--animate"));
+      particle.addEventListener("animationend", () => particle.remove());
+    });
+  };
+
+  document.addEventListener("pointerdown", createClickParticles);
 
 });
